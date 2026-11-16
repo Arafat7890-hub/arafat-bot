@@ -1,0 +1,1 @@
+module.exports={name:"mood",aliases:[],category:"Fun",description:"Fun command",async execute(sock,msg,args){const x=["😊 Happy","😎 Cool","🤩 Excited","😌 Calm","🤗 Friendly","🚀 Energetic"];await sock.sendMessage(msg.key.remoteJid,{text:"🎭 Random Mood: "+x[Math.floor(Math.random()*x.length)]});}};

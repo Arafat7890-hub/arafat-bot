@@ -1,0 +1,1 @@
+module.exports={name:"numberguess",aliases:[],category:"Fun",description:"Fun command",async execute(sock,msg,args){const n=Math.floor(Math.random()*10)+1;await sock.sendMessage(msg.key.remoteJid,{text:"🎯 Guess a number from 1–10!\nHint: "+(n%2?"Odd":"Even")+"\n(Answer: "+n+")"});}};

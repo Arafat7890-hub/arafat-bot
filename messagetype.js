@@ -1,0 +1,1 @@
+module.exports={name:"messagetype",aliases:[],category:"Info",description:"Message utility command",async execute(sock,msg,args){const m=msg.message||{};await sock.sendMessage(msg.key.remoteJid,{text:"📨 Message Type:\n"+(Object.keys(m)[0]||"Unknown")});}};

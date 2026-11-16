@@ -1,0 +1,1 @@
+module.exports={name:"max",aliases:[],category:"Utility",description:"Find maximum",async execute(sock,msg,args){const n=args.map(Number);if(!n.length||n.some(x=>!Number.isFinite(x)))return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .max 5 2 9"});await sock.sendMessage(msg.key.remoteJid,{text:`🔼 Maximum: ${Math.max(...n)}`});}};

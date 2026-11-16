@@ -1,0 +1,1 @@
+module.exports={name:"octal",aliases:[],category:"Utility",description:"Utility command",async execute(sock,msg,args){const n=Number(args[0]);if(!Number.isInteger(n))return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .octal 64"});await sock.sendMessage(msg.key.remoteJid,{text:"🔣 Octal: "+n.toString(8)});}};

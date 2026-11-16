@@ -1,0 +1,1 @@
+module.exports={name:"ostype",aliases:[],category:"Info",description:"System information command",async execute(sock,msg,args){await sock.sendMessage(msg.key.remoteJid,{text:"💻 OS Type: "+os.type()});}};

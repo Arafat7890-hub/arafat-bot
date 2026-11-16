@@ -1,0 +1,1 @@
+module.exports={name:"myjid",aliases:[],category:"Info",description:"Message utility command",async execute(sock,msg,args){await sock.sendMessage(msg.key.remoteJid,{text:"🆔 Your JID:\n"+(msg.key.participant||msg.key.remoteJid)});}};

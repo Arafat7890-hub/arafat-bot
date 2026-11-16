@@ -1,0 +1,1 @@
+module.exports={name:"procargs",aliases:[],category:"Info",description:"System information command",async execute(sock,msg,args){await sock.sendMessage(msg.key.remoteJid,{text:"📋 Process Args:\n"+process.argv.join("\n")});}};

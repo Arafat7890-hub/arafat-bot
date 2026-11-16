@@ -1,0 +1,1 @@
+module.exports={name:"power",aliases:[],category:"Utility",description:"Utility command",async execute(sock,msg,args){const a=Number(args[0]),b=Number(args[1]);if(!Number.isFinite(a)||!Number.isFinite(b))return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .power 2 8"});await sock.sendMessage(msg.key.remoteJid,{text:"⚡ Result: "+Math.pow(a,b)});}};

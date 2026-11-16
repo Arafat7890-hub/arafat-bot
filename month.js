@@ -1,0 +1,1 @@
+module.exports={name:"month",aliases:[],category:"Utility",description:"Show current month",async execute(sock,msg,args){const now=new Date();await sock.sendMessage(msg.key.remoteJid,{text:`📆 Month: ${now.toLocaleDateString("en-BD",{month:"long"})}`});}};

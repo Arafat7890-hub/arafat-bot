@@ -1,0 +1,1 @@
+module.exports={name:"replytext",aliases:[],category:"Info",description:"Message diagnostic command",async execute(sock,msg,args){const t=args.join(" ");if(!t)return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .replytext hello"});await sock.sendMessage(msg.key.remoteJid,{text:t},{quoted:msg});}};

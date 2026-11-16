@@ -1,0 +1,1 @@
+module.exports={name:"magic8",aliases:[],category:"Fun",description:"Fun command",async execute(sock,msg,args){const x=["Yes! ✅","Definitely! 🌟","Maybe 🤔","Probably not. 😅","Ask again later. 🔮"];await sock.sendMessage(msg.key.remoteJid,{text:"🎱 "+x[Math.floor(Math.random()*x.length)]});}};

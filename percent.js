@@ -1,0 +1,1 @@
+module.exports={name:"percent",aliases:[],category:"Utility",description:"Calculate percentage",async execute(sock,msg,args){const a=Number(args[0]),b=Number(args[1]);if(!Number.isFinite(a)||!Number.isFinite(b))return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .percent 25 200"});await sock.sendMessage(msg.key.remoteJid,{text:`📊 ${a}% of ${b} = ${(a*b/100).toFixed(2)}`});}};

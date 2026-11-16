@@ -1,0 +1,1 @@
+module.exports={name:"mimetype",aliases:[],category:"Info",description:"Message diagnostic command",async execute(sock,msg,args){const m=msg.message||{};const x=Object.values(m).find(v=>v&&typeof v==="object"&&v.mimetype);await sock.sendMessage(msg.key.remoteJid,{text:"📎 MIME: "+(x?.mimetype||"Text/Unknown")});}};

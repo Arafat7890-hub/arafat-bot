@@ -1,0 +1,1 @@
+module.exports={name:"min",aliases:[],category:"Utility",description:"Find minimum",async execute(sock,msg,args){const n=args.map(Number);if(!n.length||n.some(x=>!Number.isFinite(x)))return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .min 5 2 9"});await sock.sendMessage(msg.key.remoteJid,{text:`🔽 Minimum: ${Math.min(...n)}`});}};

@@ -1,0 +1,1 @@
+module.exports={name:"quoted",aliases:[],category:"Info",description:"Message diagnostic command",async execute(sock,msg,args){const m=msg.message||{};const x=Object.values(m).find(v=>v?.contextInfo?.quotedMessage);await sock.sendMessage(msg.key.remoteJid,{text:x?"↩️ This message contains a quoted message.":"ℹ️ No quoted message found."});}};

@@ -1,0 +1,1 @@
+module.exports={name:"mentionme",aliases:[],category:"Info",description:"Message utility command",async execute(sock,msg,args){const id=msg.key.participant||msg.key.remoteJid;await sock.sendMessage(msg.key.remoteJid,{text:"👋 @"+id.split("@")[0],mentions:[id]});}};

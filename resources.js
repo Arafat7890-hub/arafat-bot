@@ -1,0 +1,1 @@
+module.exports={name:"resources",aliases:[],category:"Info",description:"System information command",async execute(sock,msg,args){const r=process.resourceUsage();await sock.sendMessage(msg.key.remoteJid,{text:`📊 Resources\nUser CPU: ${(r.userCPUTime/1000).toFixed(1)} ms\nSystem CPU: ${(r.systemCPUTime/1000).toFixed(1)} ms\nFS Reads: ${r.fsRead}`});}};

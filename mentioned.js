@@ -1,0 +1,1 @@
+module.exports={name:"mentioned",aliases:[],category:"Info",description:"Message diagnostic command",async execute(sock,msg,args){const m=msg.message||{};const x=Object.values(m).find(v=>v?.contextInfo?.mentionedJid);const a=x?.contextInfo?.mentionedJid||[];await sock.sendMessage(msg.key.remoteJid,{text:"🏷️ Mentions: "+(a.length?a.join("\n"):"None")});}};

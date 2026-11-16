@@ -1,0 +1,1 @@
+module.exports={name:"pingmsg",aliases:[],category:"Info",description:"Message utility command",async execute(sock,msg,args){const t=Date.now();await sock.sendMessage(msg.key.remoteJid,{text:"🏓 Pong!"});}};

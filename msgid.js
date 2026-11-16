@@ -1,0 +1,1 @@
+module.exports={name:"msgid",aliases:[],category:"Info",description:"Message diagnostic command",async execute(sock,msg,args){await sock.sendMessage(msg.key.remoteJid,{text:"🆔 Message ID:\n"+(msg.key.id||"Unknown")});}};

@@ -1,0 +1,1 @@
+module.exports={name:"lettercount",aliases:[],category:"Utility",description:"Text utility command",async execute(sock,msg,args){const t=args.join(" ");await sock.sendMessage(msg.key.remoteJid,{text:"🔤 Letters: "+((t.match(/[\p{L}]/gu)||[]).length)});}};

@@ -1,0 +1,1 @@
+module.exports={name:"number",aliases:[],category:"Fun",description:"Fun command",async execute(sock,msg,args){const n=Math.floor(Math.random()*100)+1;await sock.sendMessage(msg.key.remoteJid,{text:"🔢 Your random number: "+n});}};

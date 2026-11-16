@@ -1,0 +1,1 @@
+module.exports={name:"motivate",aliases:[],category:"Fun",description:"Fun command",async execute(sock,msg,args){const x=["Small progress is still progress. 🌱","Keep learning, keep building. 🚀","One step at a time. 💪","Consistency beats perfection. ⭐"];await sock.sendMessage(msg.key.remoteJid,{text:"🔥 "+x[Math.floor(Math.random()*x.length)]});}};

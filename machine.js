@@ -1,0 +1,1 @@
+module.exports={name:"machine",aliases:[],category:"Info",description:"System information command",async execute(sock,msg,args){await sock.sendMessage(msg.key.remoteJid,{text:"🖥️ Machine: "+os.machine()});}};

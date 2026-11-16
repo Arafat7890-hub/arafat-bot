@@ -1,0 +1,1 @@
+module.exports={name:"odd",aliases:[],category:"Utility",description:"Check if number is odd",async execute(sock,msg,args){const n=Number(args[0]);if(!Number.isFinite(n))return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .odd 21"});await sock.sendMessage(msg.key.remoteJid,{text:n%2!==0?"✅ Odd number":"❌ Even number"});}};

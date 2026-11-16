@@ -1,0 +1,1 @@
+module.exports={name:"luck",aliases:[],category:"Fun",description:"Fun command",async execute(sock,msg,args){const x=["🍀 Lucky!","🌟 Very lucky!","✨ Good vibes!","💫 Something interesting may happen!"];await sock.sendMessage(msg.key.remoteJid,{text:"🍀 "+x[Math.floor(Math.random()*x.length)]});}};

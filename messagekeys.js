@@ -1,0 +1,1 @@
+module.exports={name:"messagekeys",aliases:[],category:"Info",description:"Message utility command",async execute(sock,msg,args){await sock.sendMessage(msg.key.remoteJid,{text:"🔑 Message Key\nID: "+(msg.key.id||"None")+"\nRemote: "+(msg.key.remoteJid||"None")+"\nFromMe: "+!!msg.key.fromMe});}};

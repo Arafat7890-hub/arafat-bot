@@ -1,0 +1,1 @@
+module.exports={name:"middle",aliases:[],category:"Utility",description:"Text utility command",async execute(sock,msg,args){const t=args.join(" ");if(!t)return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .middle hello"});const i=Math.floor((t.length-1)/2);await sock.sendMessage(msg.key.remoteJid,{text:"🎯 Middle: "+t.charAt(i)});}};

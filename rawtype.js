@@ -1,0 +1,1 @@
+module.exports={name:"rawtype",aliases:[],category:"Info",description:"Message utility command",async execute(sock,msg,args){const m=msg.message||{};await sock.sendMessage(msg.key.remoteJid,{text:"⚙️ Raw Type: "+(Object.prototype.toString.call(m))});}};
