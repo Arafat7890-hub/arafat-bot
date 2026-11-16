@@ -1,0 +1,1 @@
+module.exports={name:"day",aliases:[],category:"Utility",description:"Show current day",async execute(sock,msg,args){const now=new Date();await sock.sendMessage(msg.key.remoteJid,{text:`📅 Today: ${now.toLocaleDateString("en-BD",{weekday:"long"})}`});}};

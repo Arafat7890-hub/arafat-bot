@@ -1,0 +1,1 @@
+module.exports={name:"average",aliases:[],category:"Utility",description:"Calculate average",async execute(sock,msg,args){const n=args.map(Number);if(!n.length||n.some(x=>!Number.isFinite(x)))return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .average 10 20 30"});await sock.sendMessage(msg.key.remoteJid,{text:`📊 Average: ${n.reduce((a,b)=>a+b,0)/n.length}`});}};

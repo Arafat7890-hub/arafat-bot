@@ -1,0 +1,1 @@
+module.exports={name:"compliment",aliases:[],category:"Fun",description:"Fun command",async execute(sock,msg,args){const x=["You're doing great! 🌟","Keep going, you've got this! 💪","Your creativity is awesome! ✨","Stay curious and keep learning! 🚀"];await sock.sendMessage(msg.key.remoteJid,{text:x[Math.floor(Math.random()*x.length)]});}};

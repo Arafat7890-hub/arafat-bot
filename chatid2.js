@@ -1,0 +1,1 @@
+module.exports={name:"chatid2",aliases:[],category:"Info",description:"Message diagnostic command",async execute(sock,msg,args){await sock.sendMessage(msg.key.remoteJid,{text:"💬 Chat ID:\n"+msg.key.remoteJid});}};

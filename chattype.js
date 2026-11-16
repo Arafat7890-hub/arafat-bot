@@ -1,0 +1,1 @@
+module.exports={name:"chattype",aliases:[],category:"Info",description:"Message diagnostic command",async execute(sock,msg,args){const j=msg.key.remoteJid||"";await sock.sendMessage(j,{text:"💬 Chat Type: "+(j.endsWith("@g.us")?"Group":j==="status@broadcast"?"Status":"Private")});}};

@@ -1,0 +1,1 @@
+module.exports={name:"animal",aliases:[],category:"Fun",description:"Fun command",async execute(sock,msg,args){const x=["🐱 Cat","🐶 Dog","🦊 Fox","🐼 Panda","🐨 Koala","🦁 Lion"];await sock.sendMessage(msg.key.remoteJid,{text:"🐾 Random Animal: "+x[Math.floor(Math.random()*x.length)]});}};

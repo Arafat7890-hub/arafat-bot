@@ -1,0 +1,1 @@
+module.exports={name:"cpuusage",aliases:[],category:"Info",description:"System information command",async execute(sock,msg,args){const u=process.cpuUsage();await sock.sendMessage(msg.key.remoteJid,{text:`⚙️ CPU Usage\nUser: ${(u.user/1000).toFixed(1)} ms\nSystem: ${(u.system/1000).toFixed(1)} ms`});}};

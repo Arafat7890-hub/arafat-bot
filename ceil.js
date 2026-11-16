@@ -1,0 +1,1 @@
+module.exports={name:"ceil",aliases:[],category:"Utility",description:"Utility command",async execute(sock,msg,args){const n=Number(args[0]);if(!Number.isFinite(n))return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .ceil 4.2"});await sock.sendMessage(msg.key.remoteJid,{text:"⬆️ Ceiling: "+Math.ceil(n)});}};

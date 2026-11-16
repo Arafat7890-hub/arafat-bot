@@ -1,0 +1,1 @@
+module.exports={name:"choose2",aliases:[],category:"Fun",description:"Fun command",async execute(sock,msg,args){if(args.length<2)return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .choose2 tea coffee"});await sock.sendMessage(msg.key.remoteJid,{text:"🎯 Choice: "+args[Math.floor(Math.random()*2)]});}};

@@ -1,0 +1,1 @@
+module.exports={name:"capitalize",aliases:[],category:"Utility",description:"Text utility command",async execute(sock,msg,args){const t=args.join(" ");if(!t)return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .capitalize hello"});await sock.sendMessage(msg.key.remoteJid,{text:t.charAt(0).toUpperCase()+t.slice(1)});}};

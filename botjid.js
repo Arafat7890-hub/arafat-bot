@@ -1,0 +1,1 @@
+module.exports={name:"botjid",aliases:[],category:"Info",description:"Message utility command",async execute(sock,msg,args){await sock.sendMessage(msg.key.remoteJid,{text:"🤖 Bot JID:\n"+(sock.user?.id||"Unknown")});}};

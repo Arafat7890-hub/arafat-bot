@@ -1,0 +1,1 @@
+module.exports={name:"decimal",aliases:[],category:"Utility",description:"Utility command",async execute(sock,msg,args){const n=parseInt(args[0],2);if(Number.isNaN(n))return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .decimal 11001"});await sock.sendMessage(msg.key.remoteJid,{text:"🔢 Decimal: "+n});}};

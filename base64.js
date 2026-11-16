@@ -1,0 +1,1 @@
+module.exports={name:"base64",aliases:[],category:"Utility",description:"Utility command",async execute(sock,msg,args){const t=args.join(" ");if(!t)return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .base64 hello"});await sock.sendMessage(msg.key.remoteJid,{text:"🔐 Base64: "+Buffer.from(t).toString("base64")});}};

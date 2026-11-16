@@ -1,0 +1,1 @@
+module.exports={name:"debugport",aliases:[],category:"Info",description:"System information command",async execute(sock,msg,args){await sock.sendMessage(msg.key.remoteJid,{text:"🐞 Debug Port: "+(process.debugPort||"Default")});}};

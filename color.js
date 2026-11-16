@@ -1,0 +1,1 @@
+module.exports={name:"color",aliases:[],category:"Fun",description:"Fun command",async execute(sock,msg,args){const x=["🔴 Red","🔵 Blue","🟢 Green","🟡 Yellow","🟣 Purple","🟠 Orange"];await sock.sendMessage(msg.key.remoteJid,{text:"🎨 Random Color: "+x[Math.floor(Math.random()*x.length)]});}};

@@ -1,0 +1,1 @@
+module.exports={name:"availablemem",aliases:[],category:"Info",description:"System information command",async execute(sock,msg,args){await sock.sendMessage(msg.key.remoteJid,{text:"🟢 Available Memory: "+(process.availableMemory()/1024/1024).toFixed(1)+" MB"});}};

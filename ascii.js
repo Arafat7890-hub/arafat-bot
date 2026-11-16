@@ -1,0 +1,1 @@
+module.exports={name:"ascii",aliases:[],category:"Utility",description:"Utility command",async execute(sock,msg,args){const t=args.join(" ");if(!t)return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .ascii hello"});await sock.sendMessage(msg.key.remoteJid,{text:"🔤 ASCII: "+[...t].map(c=>c.charCodeAt(0)).join(" ")});}};

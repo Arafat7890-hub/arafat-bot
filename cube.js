@@ -1,0 +1,1 @@
+module.exports={name:"cube",aliases:[],category:"Utility",description:"Calculate cube",async execute(sock,msg,args){const n=Number(args[0]);if(!Number.isFinite(n))return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .cube 5"});await sock.sendMessage(msg.key.remoteJid,{text:`🔢 ${n}³ = ${n*n*n}`});}};

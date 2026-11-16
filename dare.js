@@ -1,0 +1,1 @@
+module.exports={name:"dare",aliases:[],category:"Fun",description:"Fun command",async execute(sock,msg,args){const x=["Send a funny emoji combination.","Write a sentence using only 5 words.","Share your favorite harmless meme.","Say something positive about a friend."];await sock.sendMessage(msg.key.remoteJid,{text:"🎯 Dare:\n"+x[Math.floor(Math.random()*x.length)]});}};

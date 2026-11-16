@@ -1,0 +1,1 @@
+module.exports={name:"date",aliases:["today"],category:"Utility",description:"Show current date",async execute(sock,msg){const date=new Date().toLocaleDateString("en-GB",{timeZone:"Asia/Dhaka",day:"2-digit",month:"long",year:"numeric"});await sock.sendMessage(msg.key.remoteJid,{text:`📅 𝗧𝗢𝗗𝗔𝗬\n\n🇧🇩 Bangladesh : ${date}`});}};
