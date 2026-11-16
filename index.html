@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arafat Bbz Connect</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Arial,sans-serif;
+  background:#0b0b0f;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.card{
+  width:min(92%,460px);
+  padding:30px;
+  border:1px solid #292932;
+  border-radius:24px;
+  background:#15151c;
+  box-shadow:0 20px 60px #0008;
+}
+.logo{text-align:center;font-size:30px;font-weight:800}
+.sub{text-align:center;color:#aaa;margin:8px 0 28px}
+.stat{
+  display:flex;
+  justify-content:space-between;
+  padding:14px 16px;
+  background:#0e0e14;
+  border-radius:14px;
+  margin-bottom:18px;
+}
+input,button{
+  width:100%;
+  padding:14px;
+  border-radius:12px;
+  border:0;
+  margin-top:10px;
+  font-size:15px;
+}
+input{background:#24242d;color:white}
+button{background:#fff;color:#111;font-weight:700;cursor:pointer}
+#msg{text-align:center;margin-top:16px;color:#aaa;font-size:14px}
+.badge{color:#7cff9b}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo">𝐀𝐫𝐚𝐟𝐚𝐭 𝐁𝐛𝐳</div>
+  <div class="sub">WhatsApp Bot Connect</div>
+
+  <div class="stat">
+    <span>Server 1</span>
+    <span class="badge" id="slots">Loading...</span>
+  </div>
+
+  <input id="number" placeholder="WhatsApp number with country code">
+  <button onclick="start()">Get Pairing Code</button>
+
+  <div id="msg">Secure session connection</div>
+</div>
+
+<script>
+async function loadStatus(){
+  try{
+    const r=await fetch("/status");
+    const d=await r.json();
+    const s=d.sessions||{};
+    document.getElementById("slots").textContent =
+      `${s.active||0}/${s.max||50} Active`;
+  }catch{
+    document.getElementById("slots").textContent="Offline";
+  }
+}
+
+async function start(){
+  const n=document.getElementById("number").value.trim();
+  const msg=document.getElementById("msg");
+
+  if(!n){
+    msg.textContent="Enter your WhatsApp number first.";
+    return;
+  }
+
+  msg.textContent="Connecting...";
+
+  try {
+    const r = await fetch("/api/pair", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({
+        slot: "1",
+        phone: n
+      })
+    });
+
+    const d = await r.json();
+
+    if (!d.ok) {
+      msg.textContent = "❌ " + (d.error || "Pairing failed");
+      return;
+    }
+
+    msg.innerHTML =
+      "🔐 Pairing Code: <b>" + d.code + "</b><br>" +
+      "Open WhatsApp → Linked Devices → Link with phone number";
+  } catch (e) {
+    msg.textContent = "❌ Server connection failed";
+  }
+}
+
+loadStatus();
+setInterval(loadStatus,5000);
+</script>
+</body>
+</html>

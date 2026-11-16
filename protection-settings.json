@@ -1,0 +1,9 @@
+{
+  "antibot": true,
+  "antiflood": true,
+  "antiraid": true,
+  "antibadword": true,
+  "antilink": false,
+  "antisticker": false,
+  "antistatus": false
+}
