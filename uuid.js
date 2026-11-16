@@ -1,0 +1,1 @@
+module.exports={name:"uuid",aliases:[],category:"Utility",description:"Utility command",async execute(sock,msg,args){const{randomUUID}=require("node:crypto");await sock.sendMessage(msg.key.remoteJid,{text:"🆔 UUID: "+randomUUID()});}};

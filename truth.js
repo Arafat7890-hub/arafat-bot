@@ -1,0 +1,1 @@
+module.exports={name:"truth",aliases:[],category:"Fun",description:"Fun command",async execute(sock,msg,args){const x=["What is one skill you want to learn?","What is your favorite hobby?","What is one goal you have this year?","What makes you laugh the most?"];await sock.sendMessage(msg.key.remoteJid,{text:"🗣️ Truth:\n"+x[Math.floor(Math.random()*x.length)]});}};

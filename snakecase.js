@@ -1,0 +1,1 @@
+module.exports={name:"snakecase",aliases:[],category:"Utility",description:"Text utility command",async execute(sock,msg,args){const t=args.join(" ");if(!t)return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .snakecase Hello World"});await sock.sendMessage(msg.key.remoteJid,{text:t.trim().toLowerCase().replace(/[^\p{L}\p{N}]+/gu,"_").replace(/^_+|_+$/g,"")});}};

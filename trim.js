@@ -1,0 +1,1 @@
+module.exports={name:"trim",aliases:[],category:"Utility",description:"Remove extra spaces",async execute(sock,msg,args){const t=args.join(" ");if(!t)return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .trim   hello   world"});await sock.sendMessage(msg.key.remoteJid,{text:t.replace(/\s+/g," ").trim()});}};

@@ -1,0 +1,1 @@
+module.exports={name:"sqrt",aliases:[],category:"Utility",description:"Utility command",async execute(sock,msg,args){const n=Number(args[0]);if(!Number.isFinite(n)||n<0)return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .sqrt 25"});await sock.sendMessage(msg.key.remoteJid,{text:"√ Result: "+Math.sqrt(n)});}};

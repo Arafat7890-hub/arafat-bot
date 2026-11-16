@@ -1,0 +1,1 @@
+module.exports={name:"senderid",aliases:[],category:"Info",description:"Message diagnostic command",async execute(sock,msg,args){const s=msg.key.participant||msg.participant||msg.key.remoteJid;await sock.sendMessage(msg.key.remoteJid,{text:"🆔 Sender ID:\n"+s.split("@")[0]});}};

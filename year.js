@@ -1,0 +1,1 @@
+module.exports={name:"year",aliases:[],category:"Utility",description:"Show current year",async execute(sock,msg,args){await sock.sendMessage(msg.key.remoteJid,{text:`🗓️ Year: ${new Date().getFullYear()}`});}};

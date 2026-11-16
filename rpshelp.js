@@ -1,0 +1,1 @@
+module.exports={name:"rpshelp",aliases:[],category:"Fun",description:"Fun command",async execute(sock,msg,args){await sock.sendMessage(msg.key.remoteJid,{text:"🎮 RPS\n\nUse: .rps rock\n.rps paper\n.rps scissors"});}};

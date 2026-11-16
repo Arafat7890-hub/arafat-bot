@@ -1,0 +1,1 @@
+module.exports={name:"titlecase",aliases:[],category:"Utility",description:"Text utility command",async execute(sock,msg,args){const t=args.join(" ");if(!t)return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .titlecase hello world"});await sock.sendMessage(msg.key.remoteJid,{text:t.toLowerCase().replace(/\b\w/g,c=>c.toUpperCase())});}};

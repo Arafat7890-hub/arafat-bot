@@ -1,0 +1,1 @@
+module.exports={name:"unique",aliases:[],category:"Utility",description:"Text utility command",async execute(sock,msg,args){const a=args;await sock.sendMessage(msg.key.remoteJid,{text:"✨ Unique: "+[...new Set(a)].join(" ")});}};

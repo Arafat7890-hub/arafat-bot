@@ -1,0 +1,1 @@
+module.exports={name:"wordcount",aliases:[],category:"Utility",description:"Count words",async execute(sock,msg,args){const t=args.join(" ").trim();await sock.sendMessage(msg.key.remoteJid,{text:`🔤 Words: ${t?t.split(/\s+/).length:0}`});}};

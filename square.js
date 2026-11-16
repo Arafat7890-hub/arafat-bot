@@ -1,0 +1,1 @@
+module.exports={name:"square",aliases:[],category:"Utility",description:"Calculate square",async execute(sock,msg,args){const n=Number(args[0]);if(!Number.isFinite(n))return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .square 5"});await sock.sendMessage(msg.key.remoteJid,{text:`🔢 ${n}² = ${n*n}`});}};

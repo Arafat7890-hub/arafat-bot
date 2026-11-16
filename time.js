@@ -1,0 +1,1 @@
+module.exports={name:"time",aliases:["clock"],category:"Utility",description:"Show current time",async execute(sock,msg){const time=new Date().toLocaleTimeString("en-GB",{timeZone:"Asia/Dhaka",hour12:true});await sock.sendMessage(msg.key.remoteJid,{text:`🕐 𝗖𝗨𝗥𝗥𝗘𝗡𝗧 𝗧𝗜𝗠𝗘\n\n🇧🇩 Bangladesh : ${time}`});}};

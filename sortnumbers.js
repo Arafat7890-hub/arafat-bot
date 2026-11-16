@@ -1,0 +1,1 @@
+module.exports={name:"sortnumbers",aliases:[],category:"Utility",description:"Text utility command",async execute(sock,msg,args){const n=args.map(Number);if(!n.length||n.some(x=>!Number.isFinite(x)))return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .sortnumbers 9 2 7"});await sock.sendMessage(msg.key.remoteJid,{text:"🔢 Sorted: "+n.sort((a,b)=>a-b).join(", ")});}};

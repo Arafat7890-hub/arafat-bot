@@ -1,0 +1,1 @@
+module.exports={name:"totalmem",aliases:[],category:"Info",description:"System information command",async execute(sock,msg,args){await sock.sendMessage(msg.key.remoteJid,{text:"🧠 Total RAM: "+(os.totalmem()/1024/1024/1024).toFixed(2)+" GB"});}};

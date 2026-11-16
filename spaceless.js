@@ -1,0 +1,1 @@
+module.exports={name:"spaceless",aliases:[],category:"Utility",description:"Text utility command",async execute(sock,msg,args){const t=args.join(" ");if(!t)return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .spaceless hello world"});await sock.sendMessage(msg.key.remoteJid,{text:t.replace(/\s+/g,"")});}};

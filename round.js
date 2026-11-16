@@ -1,0 +1,1 @@
+module.exports={name:"round",aliases:[],category:"Utility",description:"Utility command",async execute(sock,msg,args){const n=Number(args[0]);if(!Number.isFinite(n))return sock.sendMessage(msg.key.remoteJid,{text:"Usage: .round 4.6"});await sock.sendMessage(msg.key.remoteJid,{text:"🔄 Rounded: "+Math.round(n)});}};

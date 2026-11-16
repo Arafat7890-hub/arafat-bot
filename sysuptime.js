@@ -1,0 +1,1 @@
+module.exports={name:"sysuptime",aliases:[],category:"Info",description:"System information command",async execute(sock,msg,args){const s=Math.floor(os.uptime());const h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=s%60;await sock.sendMessage(msg.key.remoteJid,{text:`🖥️ System Uptime: ${h}h ${m}m ${x}s`});}};
