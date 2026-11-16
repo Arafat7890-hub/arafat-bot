@@ -1,57 +1,44 @@
-module.exports = {
-  name: "shield",
-  aliases: ["ashield", "shieldstatus"],
-  category: "Protection",
-  description: "Arafat Shield control",
+const users = new Map();
 
-  async execute(sock, msg, args = []) {
-    const jid = msg.key.remoteJid;
+const WINDOW = 10000;
+const MAX_MESSAGES = 8;
 
-    const sender =
-      msg.key.participant ||
-      msg.key.remoteJid ||
-      "";
+function check(jid, sender) {
+  const key = `${jid}:${sender}`;
+  const now = Date.now();
 
-    const number =
-      sender.split("@")[0].split(":")[0];
+  let data = users.get(key);
 
-    const isOwner =
-      msg.key.fromMe ||
-      number === "8801890492613";
-
-    if (!isOwner) {
-      return sock.sendMessage(jid, {
-        text: "❌ Owner only."
-      });
-    }
-
-    const action = String(args[0] || "status").toLowerCase();
-
-    if (action === "on") {
-      global.arafatShieldEnabled = true;
-    }
-
-    if (action === "off") {
-      global.arafatShieldEnabled = false;
-    }
-
-    const status =
-      global.arafatShieldEnabled !== false
-        ? "🟢 ON"
-        : "🔴 OFF";
-
-    await sock.sendMessage(jid, {
-      text:
-        "╭━━━〔 🛡️ ᴀʀᴀғᴀᴛ sʜɪᴇʟᴅ 〕━━━╮\n" +
-        "┃\n" +
-        `┃  sᴛᴀᴛᴜs : ${status}\n` +
-        "┃ ⚡ ᴍᴇssᴀɢᴇ ʙᴜʀsᴛ\n" +
-        "┃ 🔗 ʟɪɴᴋ ғʟᴏᴏᴅ\n" +
-        "┃ 📸 ᴍᴇᴅɪᴀ ғʟᴏᴏᴅ\n" +
-        "┃ 🔁 ʀᴇᴘᴇᴀᴛ sᴘᴀᴍ\n" +
-        "┃ 👥 ᴊᴏɪɴ ʙᴜʀsᴛ\n" +
-        "┃\n" +
-        "╰━━━━━━━━━━━━━━━━━━━━╯"
-    });
+  if (!data || now - data.start > WINDOW) {
+    data = {
+      start: now,
+      count: 0
+    };
   }
+
+  data.count++;
+  users.set(key, data);
+
+  if (data.count > MAX_MESSAGES) {
+    return {
+      suspicious: true,
+      reason: "MESSAGE_BURST",
+      count: data.count
+    };
+  }
+
+  return {
+    suspicious: false,
+    reason: null,
+    count: data.count
+  };
+}
+
+function clear(jid, sender) {
+  users.delete(`${jid}:${sender}`);
+}
+
+module.exports = {
+  check,
+  clear
 };

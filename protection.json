@@ -1,0 +1,119 @@
+{
+  "120363411932454781@g.us": {
+    "antiflood": true,
+    "antiraid": true,
+    "antibadword": true,
+    "badwords": [],
+    "antibot": true,
+    "antisticker": true,
+    "antistickerMode": "all",
+    "antilink": true,
+    "antilinkMode": "all",
+    "antistatus": true,
+    "botlist": [],
+    "antistatusMode": "all"
+  },
+  "120363407781933317@g.us": {
+    "antiflood": true,
+    "antiraid": true,
+    "antibadword": true,
+    "antibot": true,
+    "botlist": [],
+    "badwords": [],
+    "antisticker": true,
+    "antistickerMode": "all",
+    "antilink": true,
+    "antilinkMode": "all",
+    "antistatus": true,
+    "antistatusMode": "all"
+  },
+  "120363431357700973@g.us": {
+    "antiflood": true,
+    "antiraid": true,
+    "antibadword": true,
+    "antibot": true,
+    "botlist": [],
+    "badwords": [],
+    "antilink": true,
+    "antilinkMode": "all",
+    "antisticker": true,
+    "antistickerMode": "all",
+    "antistatus": true
+  },
+  "120363411589784848@g.us": {
+    "antiflood": false,
+    "antiraid": false,
+    "antibadword": false,
+    "antibot": false,
+    "botlist": [],
+    "badwords": []
+  },
+  "120363414331469570@g.us": {
+    "antiflood": false,
+    "antiraid": false,
+    "antibadword": false,
+    "antibot": false,
+    "botlist": [],
+    "badwords": []
+  },
+  "120363435349429739@g.us": {
+    "antiflood": false,
+    "antiraid": false,
+    "antibadword": false,
+    "antibot": false,
+    "botlist": [],
+    "badwords": []
+  },
+  "120363429600642762@g.us": {
+    "antiflood": true,
+    "antiraid": true,
+    "antibadword": true,
+    "antibot": true,
+    "antilink": true,
+    "antilinkMode": "all",
+    "antisticker": true,
+    "antistickerMode": "all",
+    "antistatus": true,
+    "botlist": [],
+    "badwords": []
+  },
+  "120363413601758061@g.us": {
+    "antiflood": true,
+    "antiraid": true,
+    "antibadword": true,
+    "antibot": true,
+    "antilink": true,
+    "antilinkMode": "all",
+    "antisticker": true,
+    "antistickerMode": "all",
+    "antistatus": true,
+    "botlist": [],
+    "badwords": []
+  },
+  "120363413334198280@g.us": {
+    "antiflood": true,
+    "antiraid": true,
+    "antibadword": true,
+    "antibot": true,
+    "antilink": true,
+    "antilinkMode": "all",
+    "antisticker": true,
+    "antistickerMode": "all",
+    "antistatus": true,
+    "botlist": [],
+    "badwords": []
+  },
+  "120363412518880693@g.us": {
+    "antiflood": true,
+    "antiraid": true,
+    "antibadword": true,
+    "antibot": true,
+    "antilink": true,
+    "antilinkMode": "all",
+    "antisticker": true,
+    "antistickerMode": "all",
+    "antistatus": true,
+    "botlist": [],
+    "badwords": []
+  }
+}

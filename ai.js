@@ -1,33 +1,41 @@
-const { ask } = require("../lib/ai");
+const OpenAI = require("openai");
 
-module.exports = {
-  name: "ai",
-  aliases: ["assistant"],
-  category: "AI",
-  description: "Ask Arafat Bbz AI",
+const client = new OpenAI({
+  baseURL: "https://openrouter.ai/api/v1",
+  apiKey: process.env.OPENROUTER_API_KEY
+});
 
-  async execute(sock, msg, args) {
-    const jid = msg.key.remoteJid;
-    const prompt = args.join(" ").trim();
+const MODELS = [
+  "openrouter/free"
+];
 
-    if (!prompt) {
-      return sock.sendMessage(jid, {
-        text: "🤖 𝗔𝗿𝗮𝗳𝗮𝘁 𝗔𝗜\n\nExample:\n.ai hello\n.ai explain JavaScript"
-      });
-    }
-
-    try {
-      const answer = await ask(prompt);
-
-      await sock.sendMessage(jid, {
-        text: `🤖 𝗔𝗿𝗮𝗳𝗮𝘁 𝗔𝗜\n\n${answer}`
-      });
-    } catch (e) {
-      console.log("❌ AI:", e.message);
-
-      await sock.sendMessage(jid, {
-        text: `❌ AI Error\n\n${e.message}`
-      });
-    }
+async function ask(prompt) {
+  if (!process.env.OPENROUTER_API_KEY) {
+    throw new Error("OPENROUTER_API_KEY missing");
   }
-};
+
+  const response = await client.chat.completions.create({
+    model: MODELS[0],
+    messages: [
+      {
+        role: "system",
+        content: "You are Arafat Bbz AI. Give helpful, concise answers."
+      },
+      {
+        role: "user",
+        content: String(prompt)
+      }
+    ],
+    max_tokens: 800
+  });
+
+  const text = response.choices?.[0]?.message?.content;
+
+  if (!text || !text.trim()) {
+    throw new Error("AI returned an empty response");
+  }
+
+  return text.trim();
+}
+
+module.exports = { ask };

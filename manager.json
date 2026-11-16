@@ -1,0 +1,11 @@
+{
+  "maxSlots": 50,
+  "sessions": {
+    "1": {
+      "id": "1",
+      "status": "connected",
+      "createdAt": null,
+      "updatedAt": 1794658525959
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "120363407781933317@g.us": [
+    {
+      "key": {
+        "remoteJid": "120363407781933317@g.us",
+        "fromMe": false,
+        "id": "3AA92BF241F7430C8BCC5EEADF08202F",
+        "participant": "235815699538132@lid"
+      },
+      "createdAt": 1794652211633
+    },
+    {
+      "key": {
+        "remoteJid": "120363407781933317@g.us",
+        "fromMe": true,
+        "id": "3EB0B7B9F61B028C142B03"
+      },
+      "createdAt": 1794652548444
+    },
+    {
+      "key": {
+        "remoteJid": "120363407781933317@g.us",
+        "fromMe": true,
+        "id": "3EB056ED968F5F226443BF"
+      },
+      "createdAt": 1794652569137
+    },
+    {
+      "key": {
+        "remoteJid": "120363407781933317@g.us",
+        "fromMe": true,
+        "id": "3EB03EE6EF3A987EAAF15B"
+      },
+      "createdAt": 1794652588239
+    },
+    {
+      "key": {
+        "remoteJid": "120363407781933317@g.us",
+        "fromMe": true,
+        "id": "3EB024F68E00CF5EBC84C4"
+      },
+      "createdAt": 1794653132341
+    },
+    {
+      "key": {
+        "remoteJid": "120363407781933317@g.us",
+        "fromMe": false,
+        "id": "3EB024F68E00CF5EBC84C4",
+        "participant": "80119024623770@lid"
+      },
+      "createdAt": 1794653159777
+    },
+    {
+      "key": {
+        "remoteJid": "120363407781933317@g.us",
+        "fromMe": true,
+        "id": "3EB05F3B73D042FBE4DA6A"
+      },
+      "createdAt": 1794653749745
+    }
+  ]
+}

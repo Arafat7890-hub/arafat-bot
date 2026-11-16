@@ -1,0 +1,26 @@
+{
+  "120363407781933317@g.us": {
+    "welcome": true,
+    "goodbye": true
+  },
+  "120363431357700973@g.us": {
+    "welcome": false,
+    "goodbye": false,
+    "welcome2": false,
+    "goodbye2": false,
+    "autogcstatus": false,
+    "antilinkgc": false,
+    "linklock": false,
+    "antitoxic": false
+  },
+  "120363411932454781@g.us": {
+    "welcome": false,
+    "goodbye": false,
+    "welcome2": false,
+    "goodbye2": false,
+    "autogcstatus": false,
+    "antilinkgc": false,
+    "linklock": false,
+    "antitoxic": false
+  }
+}
